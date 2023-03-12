@@ -1,20 +1,18 @@
 package model;
 
-import java.util.Objects;
-
 public class Aluno {
-    private int id;
+    private Integer id;
     private String cpf,nome,sobrenome,email;
 
     public Aluno() {
     }
 
-    public Aluno(int id, String nome) {
+    public Aluno(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-    public Aluno(int id, String cpf, String nome, String sobrenome, String email) {
+    public Aluno(Integer id, String cpf, String nome, String sobrenome, String email) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;
@@ -22,11 +20,11 @@ public class Aluno {
         this.email = email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -60,18 +58,6 @@ public class Aluno {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Aluno aluno)) return false;
-        return id == aluno.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     @Override
